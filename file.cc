@@ -1,0 +1,46 @@
+#include <iostream>
+#include <fstream>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <string>
+#include <stdio.h>
+#include <map>
+#include <vector>
+#include "file.h"
+#include "str.h"
+
+namespace shaw {
+  bool File::Exists(const std::string& filename) {
+    return access(filename.c_str(),F_OK) == 0;
+  }
+
+  int File::Filesize(const std::string& filepath) {
+    struct stat info;
+    stat(filepath.c_str(), &info);
+    return info.st_size;
+  }
+
+  bool File::Delete(const std::string& filepath) {
+    return remove(filepath.c_str()) == 0;
+  }
+
+  std::map<std::string,std::string> File::ReadLine(const std::string& filepath) {
+    std::vector<std::string> line_vec;
+    std::map<std::string,std::string> line_map;
+    if (!Exists(filepath)) {
+      std::cout<<"file not exists"<<std::endl;
+    }
+    std::ifstream file;
+    file.open(filepath);
+    std::string line;
+    while(getline(file,line))
+    {
+      if(line.empty()) {continue;}
+      line = shaw::Str::Trim(line);
+      line_vec = shaw::Str::Split(line,"=");
+      line_map[line_vec[0]] = line_vec[1];
+    }
+    file.close();
+    return line_map;
+  }
+}
