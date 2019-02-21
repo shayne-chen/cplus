@@ -9,12 +9,12 @@ namespace shaw {
     pos2 = s.find(key);
     pos1 = 0;
     while(std::string::npos != pos2) {
-      vec_str.push_back(s.substr(pos1, pos2-pos1));
+      vec_str.emplace_back(s.substr(pos1, pos2-pos1));
       pos1 = pos2 + key.size();
       pos2 = s.find(key, pos1);
     }
     if(pos1 != s.length())
-      vec_str.push_back(s.substr(pos1));
+      vec_str.emplace_back(s.substr(pos1));
     return vec_str;
   }
 
@@ -55,5 +55,14 @@ namespace shaw {
         break;
     }
     return s.substr(start,end-start+1);
+  }
+
+  std::vector<int> Str::Find(const std::string& s, const char& key) {
+    std::vector<int> index;
+    for (unsigned int i=0;i<s.size();++i) {
+      if (s[i] == key)
+        index.emplace_back(i);
+    }
+    return index;
   }
 }

@@ -1,6 +1,7 @@
 #ifndef SHAW_STR_H_
 #define SHAW_STR_H_
 #include <string>
+#include <vector>
 #include <map>
 namespace shaw {
 class Str {
@@ -9,6 +10,7 @@ class Str {
     static bool Startswith(const std::string& s, const std::string& start);
     static bool Endswith(const std::string& s, const std::string& end);
     static std::string Trim(const std::string& s);
+    static std::vector<int> Find(const std::string& s, const char& key);
 };
 } //namespace shaw
 #endif // SHAW_STR_H_
