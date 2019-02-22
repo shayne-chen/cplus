@@ -43,4 +43,25 @@ namespace shaw {
     file.close();
     return line_map;
   }
+
+  std::vector<char> File::ReadAllBytes(const std::string& filepath) {
+    std::ifstream ifs(filepath.c_str(), std::ios::binary|std::ios::ate);
+    std::ifstream::pos_type pos = ifs.tellg();
+    std::vector<char> result(pos);
+    ifs.seekg(0, std::ios::beg);
+    ifs.read(&result[0], pos);
+    return result;
+  }
+
+  bool File::WriteBytes(std::vector<char>& vec_file, std::string& outfilepath) {
+    std::ofstream outfile;
+    outfile.open(outfilepath.c_str(),std::ios::out | std::ios::binary | std::ios::trunc);
+    if (!outfile.is_open()) {
+      std::cout<<"open outfile failed."<<std::endl;
+      return false;
+    }
+    outfile.write(&vec_file[0], vec_file.size()*sizeof(vec_file[0]));
+    outfile.close();
+    return true;
+  }
 }
