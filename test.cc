@@ -14,13 +14,13 @@ int main(int argc,char* argv[]) {
   //   iter++;
   // }
   // return 0;
-  std::string in_file = "/data/shaw/long_query.wav";
-  std::string out_file = "/data/shaw/long_query_copy.wav";
+  std::string in_file = "/data/shaw/pwd.sh";
+  std::string out_file = "/data/shaw/pwd_copy.sh";
   std::vector<char> vec_file = shaw::File::ReadAllBytes(in_file);
   if (shaw::File::WriteBytes(vec_file, out_file)) {
   	std::cout<<"write bytes success."<<std::endl;
   } else {
   	std::cout<<"write bytes failed."<<std::endl;
   }
-  shaw::File::Delete(out_file);
+  // shaw::File::Delete(out_file);
 }

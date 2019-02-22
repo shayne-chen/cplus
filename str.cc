@@ -65,4 +65,22 @@ namespace shaw {
     }
     return index;
   }
+
+  std::string Str::Upper(std::string& src) {
+    for (unsigned int i=0;i<src.size();++i) {
+      if (src[i]>='a' && src[i]<='z') {
+        src[i] -= 32;
+      }
+    }
+    return src;
+  }
+
+  std::string Str::Lower(std::string& src) {
+    for (unsigned int i=0;i<src.size();++i) {
+      if (src[i]>='A' && src[i]<='Z') {
+        src[i] += 32;
+      }
+    }
+    return src;
+  }
 }

@@ -1,5 +1,5 @@
-#ifndef SHAW_FILES_H_
-#define SHAW_FILES_H_
+#ifndef SHAW_FILE_H_
+#define SHAW_FILE_H_
 #include <string>
 #include <map>
 #include <vector>
@@ -15,4 +15,4 @@ class File {
     static bool WriteBytes(std::vector<char>& vec_file, std::string& outfilepath);
 };
 } //namespace shaw
-#endif //SHAW_FILES_H_
+#endif //SHAW_FILE_H_
