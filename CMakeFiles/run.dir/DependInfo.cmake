@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/data/shaw/C++/exercise/src/files.cc" "/data/shaw/C++/exercise/CMakeFiles/test.dir/src/files.cc.o"
-  "/data/shaw/C++/exercise/src/str.cc" "/data/shaw/C++/exercise/CMakeFiles/test.dir/src/str.cc.o"
-  "/data/shaw/C++/exercise/src/test.cc" "/data/shaw/C++/exercise/CMakeFiles/test.dir/src/test.cc.o"
+  "/data/shaw/C++/exercise/src/files.cc" "/data/shaw/C++/exercise/CMakeFiles/run.dir/src/files.cc.o"
+  "/data/shaw/C++/exercise/src/main.cc" "/data/shaw/C++/exercise/CMakeFiles/run.dir/src/main.cc.o"
+  "/data/shaw/C++/exercise/src/str.cc" "/data/shaw/C++/exercise/CMakeFiles/run.dir/src/str.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

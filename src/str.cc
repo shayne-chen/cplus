@@ -101,4 +101,28 @@ namespace shaw {
     }
     return s_stack.size()==0;
   }
-}
+
+  int Str::Index(std::string& s, char& c) {
+    if (s.size() == 0) {return -1;}
+    for (unsigned int i=0;i<s.size();++i) {
+      if (c == s[i]) {return i;}
+    }
+  }
+
+  bool Str::Contains(std::string& s, std::string& substr) {
+    if (s.size() == 0 && substr.size() == 0) {return true;}
+    if (s.size() == 0 && substr.size() >0) {return false;}
+    std::vector<int> v_index = Find(s, substr[0]);
+    for (auto& index:v_index) {
+      short sub_index = 0;
+      while (s[index] == substr[sub_index] && sub_index<substr.size()) {
+        index++;
+        sub_index++;
+      }
+      if (sub_index == substr.size()) {
+        return true;
+      } else {continue;}
+    }
+    return false;
+  }
+} // namespace shaw

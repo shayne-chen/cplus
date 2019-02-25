@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named run
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run
+.PHONY : run
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+run/fast:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
 
-src/file.o: src/file.cc.o
+src/files.o: src/files.cc.o
 
-.PHONY : src/file.o
+.PHONY : src/files.o
 
 # target to build an object file
-src/file.cc.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/file.cc.o
-.PHONY : src/file.cc.o
+src/files.cc.o:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/files.cc.o
+.PHONY : src/files.cc.o
 
-src/file.i: src/file.cc.i
+src/files.i: src/files.cc.i
 
-.PHONY : src/file.i
+.PHONY : src/files.i
 
 # target to preprocess a source file
-src/file.cc.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/file.cc.i
-.PHONY : src/file.cc.i
+src/files.cc.i:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/files.cc.i
+.PHONY : src/files.cc.i
 
-src/file.s: src/file.cc.s
+src/files.s: src/files.cc.s
 
-.PHONY : src/file.s
+.PHONY : src/files.s
 
 # target to generate assembly for a file
-src/file.cc.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/file.cc.s
-.PHONY : src/file.cc.s
+src/files.cc.s:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/files.cc.s
+.PHONY : src/files.cc.s
+
+src/main.o: src/main.cc.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cc.o:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cc.o
+.PHONY : src/main.cc.o
+
+src/main.i: src/main.cc.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cc.i:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cc.i
+.PHONY : src/main.cc.i
+
+src/main.s: src/main.cc.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cc.s:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cc.s
+.PHONY : src/main.cc.s
 
 src/str.o: src/str.cc.o
 
@@ -156,7 +183,7 @@ src/str.o: src/str.cc.o
 
 # target to build an object file
 src/str.cc.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str.cc.o
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/str.cc.o
 .PHONY : src/str.cc.o
 
 src/str.i: src/str.cc.i
@@ -165,7 +192,7 @@ src/str.i: src/str.cc.i
 
 # target to preprocess a source file
 src/str.cc.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str.cc.i
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/str.cc.i
 .PHONY : src/str.cc.i
 
 src/str.s: src/str.cc.s
@@ -174,35 +201,8 @@ src/str.s: src/str.cc.s
 
 # target to generate assembly for a file
 src/str.cc.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str.cc.s
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/str.cc.s
 .PHONY : src/str.cc.s
-
-src/test.o: src/test.cc.o
-
-.PHONY : src/test.o
-
-# target to build an object file
-src/test.cc.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cc.o
-.PHONY : src/test.cc.o
-
-src/test.i: src/test.cc.i
-
-.PHONY : src/test.i
-
-# target to preprocess a source file
-src/test.cc.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cc.i
-.PHONY : src/test.cc.i
-
-src/test.s: src/test.cc.s
-
-.PHONY : src/test.s
-
-# target to generate assembly for a file
-src/test.cc.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cc.s
-.PHONY : src/test.cc.s
 
 # Help Target
 help:
@@ -212,16 +212,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... src/file.o"
-	@echo "... src/file.i"
-	@echo "... src/file.s"
+	@echo "... run"
+	@echo "... src/files.o"
+	@echo "... src/files.i"
+	@echo "... src/files.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/str.o"
 	@echo "... src/str.i"
 	@echo "... src/str.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
 .PHONY : help
 
 

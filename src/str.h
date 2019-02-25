@@ -14,6 +14,8 @@ class Str {
     static std::string Upper(std::string& src);
     static std::string Lower(std::string& src);
     static bool LegalStr(std::string& s);
+    static int Index(std::string& s, char& c);
+    static bool Contains(std::string& s, std::string& substr);
 };
 } //namespace shaw
 #endif // SHAW_STR_H_

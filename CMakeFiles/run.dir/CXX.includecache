@@ -36,15 +36,7 @@ map
 vector
 -
 
-/data/shaw/C++/exercise/src/str.h
-string
--
-vector
--
-map
--
-
-/data/shaw/C++/exercise/src/test.cc
+/data/shaw/C++/exercise/src/main.cc
 iostream
 -
 string
@@ -55,4 +47,22 @@ files.h
 /data/shaw/C++/exercise/src/files.h
 str.h
 /data/shaw/C++/exercise/src/str.h
+
+/data/shaw/C++/exercise/src/str.cc
+string
+-
+vector
+-
+stack
+-
+str.h
+/data/shaw/C++/exercise/src/str.h
+
+/data/shaw/C++/exercise/src/str.h
+string
+-
+vector
+-
+map
+-
 
