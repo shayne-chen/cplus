@@ -177,6 +177,33 @@ src/main.cc.s:
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/stack.o: src/stack.cc.o
+
+.PHONY : src/stack.o
+
+# target to build an object file
+src/stack.cc.o:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/stack.cc.o
+.PHONY : src/stack.cc.o
+
+src/stack.i: src/stack.cc.i
+
+.PHONY : src/stack.i
+
+# target to preprocess a source file
+src/stack.cc.i:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/stack.cc.i
+.PHONY : src/stack.cc.i
+
+src/stack.s: src/stack.cc.s
+
+.PHONY : src/stack.s
+
+# target to generate assembly for a file
+src/stack.cc.s:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/stack.cc.s
+.PHONY : src/stack.cc.s
+
 src/str.o: src/str.cc.o
 
 .PHONY : src/str.o
@@ -219,6 +246,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/stack.o"
+	@echo "... src/stack.i"
+	@echo "... src/stack.s"
 	@echo "... src/str.o"
 	@echo "... src/str.i"
 	@echo "... src/str.s"

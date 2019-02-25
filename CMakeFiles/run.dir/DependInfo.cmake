@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/data/shaw/C++/exercise/src/files.cc" "/data/shaw/C++/exercise/CMakeFiles/run.dir/src/files.cc.o"
   "/data/shaw/C++/exercise/src/main.cc" "/data/shaw/C++/exercise/CMakeFiles/run.dir/src/main.cc.o"
+  "/data/shaw/C++/exercise/src/stack.cc" "/data/shaw/C++/exercise/CMakeFiles/run.dir/src/stack.cc.o"
   "/data/shaw/C++/exercise/src/str.cc" "/data/shaw/C++/exercise/CMakeFiles/run.dir/src/str.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

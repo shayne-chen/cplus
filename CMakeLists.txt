@@ -6,18 +6,13 @@ project (exercise)
 
 set(SRC_ROOT_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
-#file(GLOB CXX_FILES_IN_SRC "${SRC_ROOT_PATH}/src/*.cc")
-file(GLOB CXX_FILES_IN_SRC 
+set(CXX_FILES_IN_SRC 
     ${SRC_ROOT_PATH}/src/str.cc
     ${SRC_ROOT_PATH}/src/files.cc
+    ${SRC_ROOT_PATH}/src/stack.cc
     ${SRC_ROOT_PATH}/src/main.cc
-)
-
-set(
-        SOURCE_FILES
-        ${CXX_FILES_IN_SRC}
 )
 
 include_directories(${SRC_ROOT_PATH}/src/)
 
-add_executable(run ${SOURCE_FILES})
+add_executable(run ${CXX_FILES_IN_SRC})

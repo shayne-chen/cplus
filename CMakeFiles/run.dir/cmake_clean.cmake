@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/run.dir/src/files.cc.o"
-  "CMakeFiles/run.dir/src/main.cc.o"
   "CMakeFiles/run.dir/src/str.cc.o"
+  "CMakeFiles/run.dir/src/files.cc.o"
+  "CMakeFiles/run.dir/src/stack.cc.o"
+  "CMakeFiles/run.dir/src/main.cc.o"
   "run.pdb"
   "run"
 )

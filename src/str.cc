@@ -109,20 +109,21 @@ namespace shaw {
     }
   }
 
-  bool Str::Contains(std::string& s, std::string& substr) {
-    if (s.size() == 0 && substr.size() == 0) {return true;}
-    if (s.size() == 0 && substr.size() >0) {return false;}
+  int Str::Contains(std::string& s, std::string& substr) {
+    if (s.size() == 0 && substr.size() == 0) {return 0;}
+    if (s.size() == 0 && substr.size() >0) {return -1;}
     std::vector<int> v_index = Find(s, substr[0]);
     for (auto& index:v_index) {
       short sub_index = 0;
-      while (s[index] == substr[sub_index] && sub_index<substr.size()) {
-        index++;
+      short s_index = index;
+      while (s[s_index] == substr[sub_index] && sub_index<substr.size()) {
+        s_index++;
         sub_index++;
       }
       if (sub_index == substr.size()) {
-        return true;
+        return index;
       } else {continue;}
     }
-    return false;
+    return -1;
   }
 } // namespace shaw

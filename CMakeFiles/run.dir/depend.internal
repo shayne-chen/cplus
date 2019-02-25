@@ -8,7 +8,11 @@ CMakeFiles/run.dir/src/files.cc.o
 CMakeFiles/run.dir/src/main.cc.o
  /data/shaw/C++/exercise/src/files.h
  /data/shaw/C++/exercise/src/main.cc
+ /data/shaw/C++/exercise/src/stack.h
  /data/shaw/C++/exercise/src/str.h
+CMakeFiles/run.dir/src/stack.cc.o
+ /data/shaw/C++/exercise/src/stack.cc
+ /data/shaw/C++/exercise/src/stack.h
 CMakeFiles/run.dir/src/str.cc.o
  /data/shaw/C++/exercise/src/str.cc
  /data/shaw/C++/exercise/src/str.h
