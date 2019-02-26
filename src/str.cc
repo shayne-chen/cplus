@@ -85,7 +85,7 @@ namespace shaw {
     return src;
   }
 
-  bool Str::LegalStr(std::string& s) {
+  bool Str::LegalStr(const std::string& s) {
     if (s.size()<=0) {return true;}
     std::stack<char> s_stack;
     for (auto& c:s) {
@@ -102,14 +102,14 @@ namespace shaw {
     return s_stack.size()==0;
   }
 
-  int Str::Index(std::string& s, char& c) {
+  int Str::Index(const std::string& s, const char& c) {
     if (s.size() == 0) {return -1;}
     for (unsigned int i=0;i<s.size();++i) {
       if (c == s[i]) {return i;}
     }
   }
 
-  int Str::Contains(std::string& s, std::string& substr) {
+  int Str::Contains(const std::string& s, const std::string& substr) {
     if (s.size() == 0 && substr.size() == 0) {return 0;}
     if (s.size() == 0 && substr.size() >0) {return -1;}
     std::vector<int> v_index = Find(s, substr[0]);
