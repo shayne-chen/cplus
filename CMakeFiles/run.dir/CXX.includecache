@@ -6,35 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/data/shaw/C++/exercise/src/files.h
-string
--
-map
--
-vector
--
-
-/data/shaw/C++/exercise/src/main.cc
-iostream
--
-string
--
-vector
--
-files.h
-/data/shaw/C++/exercise/src/files.h
-str.h
-/data/shaw/C++/exercise/src/str.h
-stack.h
-/data/shaw/C++/exercise/src/stack.h
-
-/data/shaw/C++/exercise/src/stack.h
-
-/data/shaw/C++/exercise/src/str.h
-string
--
-vector
--
-map
--
-

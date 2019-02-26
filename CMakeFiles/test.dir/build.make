@@ -57,18 +57,18 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/src/files.cc.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/src/files.cc.o: src/files.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/src/files.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/files.cc.o -c /data/shaw/C++/exercise/src/files.cc
+CMakeFiles/test.dir/src/str_test.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/str_test.cc.o: src/str_test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/src/str_test.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/str_test.cc.o -c /data/shaw/C++/exercise/src/str_test.cc
 
-CMakeFiles/test.dir/src/files.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/files.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/files.cc > CMakeFiles/test.dir/src/files.cc.i
+CMakeFiles/test.dir/src/str_test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/str_test.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/str_test.cc > CMakeFiles/test.dir/src/str_test.cc.i
 
-CMakeFiles/test.dir/src/files.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/files.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/files.cc -o CMakeFiles/test.dir/src/files.cc.s
+CMakeFiles/test.dir/src/str_test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/str_test.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/str_test.cc -o CMakeFiles/test.dir/src/str_test.cc.s
 
 CMakeFiles/test.dir/src/str.cc.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/str.cc.o: src/str.cc
@@ -83,31 +83,31 @@ CMakeFiles/test.dir/src/str.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/str.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/str.cc -o CMakeFiles/test.dir/src/str.cc.s
 
-CMakeFiles/test.dir/src/test.cc.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/src/test.cc.o: src/test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/test.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/test.cc.o -c /data/shaw/C++/exercise/src/test.cc
+CMakeFiles/test.dir/src/test_main.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/test_main.cc.o: src/test_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/test_main.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/test_main.cc.o -c /data/shaw/C++/exercise/src/test_main.cc
 
-CMakeFiles/test.dir/src/test.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/test.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/test.cc > CMakeFiles/test.dir/src/test.cc.i
+CMakeFiles/test.dir/src/test_main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/test_main.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/test_main.cc > CMakeFiles/test.dir/src/test_main.cc.i
 
-CMakeFiles/test.dir/src/test.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/test.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/test.cc -o CMakeFiles/test.dir/src/test.cc.s
+CMakeFiles/test.dir/src/test_main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/test_main.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/test_main.cc -o CMakeFiles/test.dir/src/test_main.cc.s
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/src/files.cc.o" \
+"CMakeFiles/test.dir/src/str_test.cc.o" \
 "CMakeFiles/test.dir/src/str.cc.o" \
-"CMakeFiles/test.dir/src/test.cc.o"
+"CMakeFiles/test.dir/src/test_main.cc.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-test: CMakeFiles/test.dir/src/files.cc.o
+test: CMakeFiles/test.dir/src/str_test.cc.o
 test: CMakeFiles/test.dir/src/str.cc.o
-test: CMakeFiles/test.dir/src/test.cc.o
+test: CMakeFiles/test.dir/src/test_main.cc.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable test"

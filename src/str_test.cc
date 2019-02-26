@@ -20,7 +20,7 @@ class StrTest:public testing::Test {
 };
 
 TEST_F(StrTest,StartswithTestCorrect) {
-  EXPECT_TRUE(st.Startswith(s,"my"));
+  EXPECT_TRUE(st.Startswith(s,"  my"));
 }
 
 TEST_F(StrTest,StartswithTestFalse) {
@@ -56,5 +56,14 @@ TEST_F(StrTest,ContainsTestCorrect) {
 TEST_F(StrTest,ContainsTestFalse) {
   std::string s2 = "__shaw";
   EXPECT_EQ(st.Contains(s,s2),-1);
+}
+
+TEST_F(StrTest,IndexTest) {
+  const char c = 'n';
+  EXPECT_EQ(st.Index(s,c),4);
+}
+
+TEST_F(StrTest,LegalStrTest) {
+  EXPECT_TRUE(st.LegalStr(s));
 }
 } // namespace
