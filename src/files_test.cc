@@ -23,14 +23,20 @@ TEST_F(FilesTest,ExistsTest) {
   EXPECT_TRUE(f.Exists(filepath));
 }
 
+TEST_F(FilesTest,ExistsTestFalse) {
+  const std::string file_tmp = "/home/mobvoi/chen.sh";
+  EXPECT_FALSE(f.Exists(file_tmp));
+}
+
 TEST_F(FilesTest,FileSizeTest) {
   EXPECT_EQ(f.Filesize(filepath),179);
 }
 
 TEST_F(FilesTest,CopyFileTest) {
+  int filesize = f.Filesize(filepath);
   std::vector<char> v_read = f.ReadAllBytes(filepath);
   std::string outpath = "/home/mobvoi/shaw_copy.sh";
   f.WriteBytes(v_read,outpath);
-  EXPECT_EQ(f.Filesize(outpath),179);
+  EXPECT_EQ(f.Filesize(outpath),filesize);
 }
 } //anonymous namespace

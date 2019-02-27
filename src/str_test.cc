@@ -20,7 +20,7 @@ class StrTest:public testing::Test {
 };
 
 TEST_F(StrTest,StartswithTestCorrect) {
-  EXPECT_TRUE(st.Startswith(s,"my"));
+  EXPECT_TRUE(st.Startswith(s,"  my"));
 }
 
 TEST_F(StrTest,StartswithTestFalse) {
