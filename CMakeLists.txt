@@ -6,13 +6,9 @@ project (exercise)
 
 set(SRC_ROOT_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_subdirectory(${SRC_ROOT_PATH}/third_party/gtest)
-
 include_directories(${SRC_ROOT_PATH}/src)
 
 include_directories(${SRC_ROOT_PATH}/third_party/gtest/include)
-
-link_directories(${SRC_ROOT_PATH}/third_party/gtest)
 
 set(CXX_FILES_IN_SRC 
     ${SRC_ROOT_PATH}/src/str.cc

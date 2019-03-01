@@ -139,7 +139,6 @@ test: CMakeFiles/test.dir/src/str_test.cc.o
 test: CMakeFiles/test.dir/src/files_test.cc.o
 test: CMakeFiles/test.dir/src/test_main.cc.o
 test: CMakeFiles/test.dir/build.make
-test: lib/libgtest.a
 test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)

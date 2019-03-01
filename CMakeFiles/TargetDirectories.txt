@@ -2,7 +2,3 @@
 /data/shaw/C++/exercise/CMakeFiles/edit_cache.dir
 /data/shaw/C++/exercise/CMakeFiles/test.dir
 /data/shaw/C++/exercise/CMakeFiles/run.dir
-/data/shaw/C++/exercise/third_party/gtest/CMakeFiles/edit_cache.dir
-/data/shaw/C++/exercise/third_party/gtest/CMakeFiles/gtest_main.dir
-/data/shaw/C++/exercise/third_party/gtest/CMakeFiles/rebuild_cache.dir
-/data/shaw/C++/exercise/third_party/gtest/CMakeFiles/gtest.dir
