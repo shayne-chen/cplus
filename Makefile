@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
 # Target rules for targets named run
 
 # Build rule for target.
@@ -123,12 +136,39 @@ run/fast:
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
 .PHONY : run/fast
 
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f third_party/gtest/CMakeFiles/gtest_main.dir/build.make third_party/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f third_party/gtest/CMakeFiles/gtest.dir/build.make third_party/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
 src/files.o: src/files.cc.o
 
 .PHONY : src/files.o
 
 # target to build an object file
 src/files.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/files.cc.o
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/files.cc.o
 .PHONY : src/files.cc.o
 
@@ -138,6 +178,7 @@ src/files.i: src/files.cc.i
 
 # target to preprocess a source file
 src/files.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/files.cc.i
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/files.cc.i
 .PHONY : src/files.cc.i
 
@@ -147,8 +188,36 @@ src/files.s: src/files.cc.s
 
 # target to generate assembly for a file
 src/files.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/files.cc.s
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/files.cc.s
 .PHONY : src/files.cc.s
+
+src/files_test.o: src/files_test.cc.o
+
+.PHONY : src/files_test.o
+
+# target to build an object file
+src/files_test.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/files_test.cc.o
+.PHONY : src/files_test.cc.o
+
+src/files_test.i: src/files_test.cc.i
+
+.PHONY : src/files_test.i
+
+# target to preprocess a source file
+src/files_test.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/files_test.cc.i
+.PHONY : src/files_test.cc.i
+
+src/files_test.s: src/files_test.cc.s
+
+.PHONY : src/files_test.s
+
+# target to generate assembly for a file
+src/files_test.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/files_test.cc.s
+.PHONY : src/files_test.cc.s
 
 src/main.o: src/main.cc.o
 
@@ -210,6 +279,7 @@ src/str.o: src/str.cc.o
 
 # target to build an object file
 src/str.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str.cc.o
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/str.cc.o
 .PHONY : src/str.cc.o
 
@@ -219,6 +289,7 @@ src/str.i: src/str.cc.i
 
 # target to preprocess a source file
 src/str.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str.cc.i
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/str.cc.i
 .PHONY : src/str.cc.i
 
@@ -228,8 +299,63 @@ src/str.s: src/str.cc.s
 
 # target to generate assembly for a file
 src/str.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str.cc.s
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/str.cc.s
 .PHONY : src/str.cc.s
+
+src/str_test.o: src/str_test.cc.o
+
+.PHONY : src/str_test.o
+
+# target to build an object file
+src/str_test.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str_test.cc.o
+.PHONY : src/str_test.cc.o
+
+src/str_test.i: src/str_test.cc.i
+
+.PHONY : src/str_test.i
+
+# target to preprocess a source file
+src/str_test.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str_test.cc.i
+.PHONY : src/str_test.cc.i
+
+src/str_test.s: src/str_test.cc.s
+
+.PHONY : src/str_test.s
+
+# target to generate assembly for a file
+src/str_test.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/str_test.cc.s
+.PHONY : src/str_test.cc.s
+
+src/test_main.o: src/test_main.cc.o
+
+.PHONY : src/test_main.o
+
+# target to build an object file
+src/test_main.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test_main.cc.o
+.PHONY : src/test_main.cc.o
+
+src/test_main.i: src/test_main.cc.i
+
+.PHONY : src/test_main.i
+
+# target to preprocess a source file
+src/test_main.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test_main.cc.i
+.PHONY : src/test_main.cc.i
+
+src/test_main.s: src/test_main.cc.s
+
+.PHONY : src/test_main.s
+
+# target to generate assembly for a file
+src/test_main.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test_main.cc.s
+.PHONY : src/test_main.cc.s
 
 # Help Target
 help:
@@ -239,10 +365,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... run"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... src/files.o"
 	@echo "... src/files.i"
 	@echo "... src/files.s"
+	@echo "... src/files_test.o"
+	@echo "... src/files_test.i"
+	@echo "... src/files_test.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -252,6 +384,12 @@ help:
 	@echo "... src/str.o"
 	@echo "... src/str.i"
 	@echo "... src/str.s"
+	@echo "... src/str_test.o"
+	@echo "... src/str_test.i"
+	@echo "... src/str_test.s"
+	@echo "... src/test_main.o"
+	@echo "... src/test_main.i"
+	@echo "... src/test_main.s"
 .PHONY : help
 
 

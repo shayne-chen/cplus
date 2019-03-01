@@ -8,11 +8,12 @@ class FilesTest : public testing::Test {
   protected:
     Files f;
     const std::string filepath = "/home/mobvoi/shaw.sh";
+    
+    void SetUp() override{
+     //  execute before each case start;
+      // Files f;
+    }
     /*
-     virtual void SetUp() override{
-       execute before each case start;
-     }
-
      virtual void TearDown() override {
        execute after each case start;
      }

@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/test.dir/src/str_test.cc.o CMakeFiles/test.dir/src/str.cc.o CMakeFiles/test.dir/src/test_main.cc.o  -o test 
+/usr/bin/c++    -rdynamic CMakeFiles/test.dir/src/str.cc.o CMakeFiles/test.dir/src/files.cc.o CMakeFiles/test.dir/src/str_test.cc.o CMakeFiles/test.dir/src/files_test.cc.o CMakeFiles/test.dir/src/test_main.cc.o  -o test  -L/data/shaw/C++/exercise/third_party/gtest -Wl,-rpath,/data/shaw/C++/exercise/third_party/gtest lib/libgtest.a -lpthread -lpthread 
