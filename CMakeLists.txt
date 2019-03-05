@@ -29,3 +29,9 @@ set(UNIT_TEST_SRC
 
 add_executable(test ${UNIT_TEST_SRC})
 target_link_libraries(test gtest pthread)
+
+set(THREAD_TEST_SRC
+    ${SRC_ROOT_PATH}/src/thread.cc
+)
+add_executable(thread ${THREAD_TEST_SRC})
+target_link_libraries(thread pthread)

@@ -65,6 +65,43 @@ CMAKE_SOURCE_DIR = /data/shaw/C++/exercise
 CMAKE_BINARY_DIR = /data/shaw/C++/exercise
 
 #=============================================================================
+# Target rules for target CMakeFiles/thread.dir
+
+# All Build rule for target.
+CMakeFiles/thread.dir/all:
+	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/depend
+	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=12,13 "Built target thread"
+.PHONY : CMakeFiles/thread.dir/all
+
+# Include target in all.
+all: CMakeFiles/thread.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/thread.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/thread.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 0
+.PHONY : CMakeFiles/thread.dir/rule
+
+# Convenience name for target.
+thread: CMakeFiles/thread.dir/rule
+
+.PHONY : thread
+
+# clean rule for target.
+CMakeFiles/thread.dir/clean:
+	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/clean
+.PHONY : CMakeFiles/thread.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/thread.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.

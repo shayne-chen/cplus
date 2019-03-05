@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named thread
+
+# Build rule for target.
+thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 thread
+.PHONY : thread
+
+# fast build rule for target.
+thread/fast:
+	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/build
+.PHONY : thread/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -331,6 +344,33 @@ src/test_main.cc.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test_main.cc.s
 .PHONY : src/test_main.cc.s
 
+src/thread.o: src/thread.cc.o
+
+.PHONY : src/thread.o
+
+# target to build an object file
+src/thread.cc.o:
+	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/src/thread.cc.o
+.PHONY : src/thread.cc.o
+
+src/thread.i: src/thread.cc.i
+
+.PHONY : src/thread.i
+
+# target to preprocess a source file
+src/thread.cc.i:
+	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/src/thread.cc.i
+.PHONY : src/thread.cc.i
+
+src/thread.s: src/thread.cc.s
+
+.PHONY : src/thread.s
+
+# target to generate assembly for a file
+src/thread.cc.s:
+	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/src/thread.cc.s
+.PHONY : src/thread.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -339,6 +379,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... thread"
 	@echo "... test"
 	@echo "... run"
 	@echo "... src/files.o"
@@ -362,6 +403,9 @@ help:
 	@echo "... src/test_main.o"
 	@echo "... src/test_main.i"
 	@echo "... src/test_main.s"
+	@echo "... src/thread.o"
+	@echo "... src/thread.i"
+	@echo "... src/thread.s"
 .PHONY : help
 
 
