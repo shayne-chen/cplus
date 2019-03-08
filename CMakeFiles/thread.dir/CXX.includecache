@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/data/shaw/C++/exercise/src/thread.cc
+/data/shaw/cplusplus/exercise/src/thread.cc
 pthread.h
 -
 iostream

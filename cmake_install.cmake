@@ -1,4 +1,4 @@
-# Install script for directory: /data/shaw/C++/exercise
+# Install script for directory: /data/shaw/cplusplus/exercise
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/data/shaw/C++/exercise/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/data/shaw/cplusplus/exercise/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

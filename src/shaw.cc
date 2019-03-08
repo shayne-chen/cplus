@@ -1,35 +1,24 @@
 #include <iostream>
-#include <string>
-#include <glog/logging.h>
-#define PREFIX "[module] "
-struct person
-{
-  const char* name;
-  short age;
-} people[] {
-  {"chen",12},
-  {"shaw",13},
-  {"jack",14}
+#include "shaw.h"
+using namespace std;
+class Single {
+  private:
+    Single(){}
+    static Single* p;
+  public:
+    static Single* getinstance() {
+      if (p==NULL) {
+      	p = new Single();
+      }
+      return p;
+    }
 };
-/*
-bool test(std::string& real_name, short& c_age) {
-  for (auto& p:people) {
-  	if (p.name == real_name) {
-  	  p.age = c_age;
-  	  std::cout<<"change age is : "<<p.age<<std::endl;
-  	  return true;
-  	}
-  }
-  return false;
-}
-*/
-int main(int argc, char* argv[])
+Single* Single::p = NULL;
+
+int main(int argc, char const *argv[])
 {
-  google::InitGoogleLogging(argv[0]);
-  FLAGS_log_dir = "/home/mobvoi/glog";
-  LOG(INFO) <<PREFIX << "This is an info  message";
-  LOG(WARNING) << PREFIX<< "This is a warning message";
-  LOG(ERROR) << PREFIX<< "This is an error message";
-  LOG(FATAL) << PREFIX<< "This is a fatal message";
-  return 0;
+	Single* p1 = Single::getinstance();
+	Single* p2 = Single::getinstance();
+	cout<<p1<<endl;
+	cout<<p2<<endl;
 }

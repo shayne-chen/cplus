@@ -16,6 +16,7 @@ class Str {
     static bool LegalStr(const std::string& s);
     static int Index(const std::string& s, const char& c);
     static int Contains(const std::string& s, const std::string& substr);
+    static int* Concat(int& s1, int& s2);
 };
 } //namespace shaw
 #endif // SHAW_STR_H_

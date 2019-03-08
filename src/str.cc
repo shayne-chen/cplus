@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include <vector>
 #include <stack>
 #include "str.h"
@@ -125,5 +126,14 @@ namespace shaw {
       } else {continue;}
     }
     return -1;
+  }
+
+  int* Str::Concat(int& s1, int& s2) {
+    int s3 = s1 + s2;
+    int* p = &s3;
+    std::cout<<"source:"<<p<<std::endl;
+    std::cout<<"source:"<<*p<<std::endl;
+    // std::cout<<*p<<std::endl;
+    return p;
   }
 } // namespace shaw

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/data/shaw/C++/exercise/src/thread.cc" "/data/shaw/C++/exercise/CMakeFiles/thread.dir/src/thread.cc.o"
+  "/data/shaw/cplusplus/exercise/src/thread.cc" "/data/shaw/cplusplus/exercise/CMakeFiles/thread.dir/src/thread.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

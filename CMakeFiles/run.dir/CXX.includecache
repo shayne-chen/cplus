@@ -6,29 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/data/shaw/C++/exercise/src/files.cc
-iostream
--
-fstream
--
-unistd.h
--
-sys/stat.h
--
-string
--
-stdio.h
--
-map
--
-vector
--
-files.h
-/data/shaw/C++/exercise/src/files.h
-str.h
-/data/shaw/C++/exercise/src/str.h
-
-/data/shaw/C++/exercise/src/files.h
+/data/shaw/cplusplus/exercise/src/files.h
 string
 -
 map
@@ -36,7 +14,7 @@ map
 vector
 -
 
-/data/shaw/C++/exercise/src/main.cc
+/data/shaw/cplusplus/exercise/src/main.cc
 iostream
 -
 string
@@ -44,31 +22,15 @@ string
 vector
 -
 files.h
-/data/shaw/C++/exercise/src/files.h
+/data/shaw/cplusplus/exercise/src/files.h
 str.h
-/data/shaw/C++/exercise/src/str.h
+/data/shaw/cplusplus/exercise/src/str.h
 stack.h
-/data/shaw/C++/exercise/src/stack.h
+/data/shaw/cplusplus/exercise/src/stack.h
 
-/data/shaw/C++/exercise/src/stack.cc
-iostream
--
-stack.h
-/data/shaw/C++/exercise/src/stack.h
+/data/shaw/cplusplus/exercise/src/stack.h
 
-/data/shaw/C++/exercise/src/stack.h
-
-/data/shaw/C++/exercise/src/str.cc
-string
--
-vector
--
-stack
--
-str.h
-/data/shaw/C++/exercise/src/str.h
-
-/data/shaw/C++/exercise/src/str.h
+/data/shaw/cplusplus/exercise/src/str.h
 string
 -
 vector

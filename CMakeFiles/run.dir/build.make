@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/shaw/C++/exercise
+CMAKE_SOURCE_DIR = /data/shaw/cplusplus/exercise
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/shaw/C++/exercise
+CMAKE_BINARY_DIR = /data/shaw/cplusplus/exercise
 
 # Include any dependencies generated for this target.
 include CMakeFiles/run.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/run.dir/flags.make
 
 CMakeFiles/run.dir/src/str.cc.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/str.cc.o: src/str.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/run.dir/src/str.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/str.cc.o -c /data/shaw/C++/exercise/src/str.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/run.dir/src/str.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/str.cc.o -c /data/shaw/cplusplus/exercise/src/str.cc
 
 CMakeFiles/run.dir/src/str.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/str.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/str.cc > CMakeFiles/run.dir/src/str.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/cplusplus/exercise/src/str.cc > CMakeFiles/run.dir/src/str.cc.i
 
 CMakeFiles/run.dir/src/str.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/str.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/str.cc -o CMakeFiles/run.dir/src/str.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/str.cc -o CMakeFiles/run.dir/src/str.cc.s
 
 CMakeFiles/run.dir/src/files.cc.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/files.cc.o: src/files.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run.dir/src/files.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/files.cc.o -c /data/shaw/C++/exercise/src/files.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run.dir/src/files.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/files.cc.o -c /data/shaw/cplusplus/exercise/src/files.cc
 
 CMakeFiles/run.dir/src/files.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/files.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/files.cc > CMakeFiles/run.dir/src/files.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/cplusplus/exercise/src/files.cc > CMakeFiles/run.dir/src/files.cc.i
 
 CMakeFiles/run.dir/src/files.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/files.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/files.cc -o CMakeFiles/run.dir/src/files.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/files.cc -o CMakeFiles/run.dir/src/files.cc.s
 
 CMakeFiles/run.dir/src/stack.cc.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/stack.cc.o: src/stack.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run.dir/src/stack.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/stack.cc.o -c /data/shaw/C++/exercise/src/stack.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run.dir/src/stack.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/stack.cc.o -c /data/shaw/cplusplus/exercise/src/stack.cc
 
 CMakeFiles/run.dir/src/stack.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/stack.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/stack.cc > CMakeFiles/run.dir/src/stack.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/cplusplus/exercise/src/stack.cc > CMakeFiles/run.dir/src/stack.cc.i
 
 CMakeFiles/run.dir/src/stack.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/stack.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/stack.cc -o CMakeFiles/run.dir/src/stack.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/stack.cc -o CMakeFiles/run.dir/src/stack.cc.s
 
 CMakeFiles/run.dir/src/main.cc.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/main.cc.o: src/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run.dir/src/main.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/main.cc.o -c /data/shaw/C++/exercise/src/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run.dir/src/main.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/main.cc.o -c /data/shaw/cplusplus/exercise/src/main.cc
 
 CMakeFiles/run.dir/src/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/main.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/C++/exercise/src/main.cc > CMakeFiles/run.dir/src/main.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/cplusplus/exercise/src/main.cc > CMakeFiles/run.dir/src/main.cc.i
 
 CMakeFiles/run.dir/src/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/main.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/C++/exercise/src/main.cc -o CMakeFiles/run.dir/src/main.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/main.cc -o CMakeFiles/run.dir/src/main.cc.s
 
 # Object files for target run
 run_OBJECTS = \
@@ -125,7 +125,7 @@ run: CMakeFiles/run.dir/src/stack.cc.o
 run: CMakeFiles/run.dir/src/main.cc.o
 run: CMakeFiles/run.dir/build.make
 run: CMakeFiles/run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 CMakeFiles/run.dir/depend:
-	cd /data/shaw/C++/exercise && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/shaw/C++/exercise /data/shaw/C++/exercise /data/shaw/C++/exercise /data/shaw/C++/exercise /data/shaw/C++/exercise/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /data/shaw/cplusplus/exercise && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/shaw/cplusplus/exercise /data/shaw/cplusplus/exercise /data/shaw/cplusplus/exercise /data/shaw/cplusplus/exercise /data/shaw/cplusplus/exercise/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run.dir/depend
 

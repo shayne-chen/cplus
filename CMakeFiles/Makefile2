@@ -59,10 +59,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/shaw/C++/exercise
+CMAKE_SOURCE_DIR = /data/shaw/cplusplus/exercise
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/shaw/C++/exercise
+CMAKE_BINARY_DIR = /data/shaw/cplusplus/exercise
 
 #=============================================================================
 # Target rules for target CMakeFiles/thread.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /data/shaw/C++/exercise
 CMakeFiles/thread.dir/all:
 	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/depend
 	$(MAKE) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=12,13 "Built target thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=12,13 "Built target thread"
 .PHONY : CMakeFiles/thread.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/thread.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/thread.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/cplusplus/exercise/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/thread.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/cplusplus/exercise/CMakeFiles 0
 .PHONY : CMakeFiles/thread.dir/rule
 
 # Convenience name for target.
@@ -108,7 +108,7 @@ clean: CMakeFiles/thread.dir/clean
 CMakeFiles/test.dir/all:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=6,7,8,9,10,11 "Built target test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=6,7,8,9,10,11 "Built target test"
 .PHONY : CMakeFiles/test.dir/all
 
 # Include target in all.
@@ -118,9 +118,9 @@ all: CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/cplusplus/exercise/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/cplusplus/exercise/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule
 
 # Convenience name for target.
@@ -145,7 +145,7 @@ clean: CMakeFiles/test.dir/clean
 CMakeFiles/run.dir/all:
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/shaw/C++/exercise/CMakeFiles --progress-num=1,2,3,4,5 "Built target run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=1,2,3,4,5 "Built target run"
 .PHONY : CMakeFiles/run.dir/all
 
 # Include target in all.
@@ -155,9 +155,9 @@ all: CMakeFiles/run.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/cplusplus/exercise/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/C++/exercise/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/shaw/cplusplus/exercise/CMakeFiles 0
 .PHONY : CMakeFiles/run.dir/rule
 
 # Convenience name for target.
