@@ -16,14 +16,5 @@ int main(int argc,char* argv[]) {
   } else {
   	cout<<"false"<<endl;
   }
-  // set<char> s1;
-  // s1.insert('a');
-  // s1.insert('b');
-  // cout<<s1.count('a')<<endl;
-  // if (s1.count('a')) {
-  // 	cout<<"false"<<endl;
-  // } else {
-  // 	cout<<"true"<<endl;
-  // }
   return 0;
 }
