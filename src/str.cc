@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <set>
 #include "str.h"
 
 namespace shaw {
@@ -128,12 +129,21 @@ namespace shaw {
     return -1;
   }
 
-  int* Str::Concat(int& s1, int& s2) {
-    int s3 = s1 + s2;
-    int* p = &s3;
-    std::cout<<"source:"<<p<<std::endl;
-    std::cout<<"source:"<<*p<<std::endl;
-    // std::cout<<*p<<std::endl;
-    return p;
+  bool Str::Sameletter(const std::string& s1, const std::string& s2) {
+    if (s1.size() == 0 && s2.size() == 0) {return true;}
+    std::set<char> set1;
+    std::set<char> set2;
+    for (int i=0;i<s1.size();++i) {
+      set1.insert(s1[i]);
+      set2.insert(s2[i]);
+    }
+    if (set1.size() != set2.size()) {return false;}
+    std::set<char>::iterator it;
+    for (it=set1.begin();it!=set1.end();++it) {
+      if (set2.count(*it)) {
+        continue;
+      } else {return false;}
+    }
+    return true;
   }
 } // namespace shaw
