@@ -9,12 +9,7 @@ using namespace shaw;
 using namespace std;
 
 int main(int argc,char* argv[]) {
-  const string s1 = "abcdae";
-  const string s2 = "aadcbaaaaabcdd";
-  if (Str::Sameletter(s1,s2)) {
-  	cout<<"true"<<endl;
-  } else {
-  	cout<<"false"<<endl;
-  }
+  string s1 = Str::reverse("123456789");
+  cout<<s1<<endl;
   return 0;
 }
