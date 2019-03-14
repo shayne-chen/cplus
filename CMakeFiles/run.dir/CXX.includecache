@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/data/shaw/cplusplus/exercise/src/boring.h
+
 /data/shaw/cplusplus/exercise/src/files.h
 string
 -
@@ -29,6 +31,8 @@ str.h
 /data/shaw/cplusplus/exercise/src/str.h
 stack.h
 /data/shaw/cplusplus/exercise/src/stack.h
+boring.h
+/data/shaw/cplusplus/exercise/src/boring.h
 
 /data/shaw/cplusplus/exercise/src/stack.h
 

@@ -14,6 +14,7 @@ set(CXX_FILES_IN_SRC
     ${SRC_ROOT_PATH}/src/str.cc
     ${SRC_ROOT_PATH}/src/files.cc
     ${SRC_ROOT_PATH}/src/stack.cc
+    ${SRC_ROOT_PATH}/src/boring.cc
     ${SRC_ROOT_PATH}/src/main.cc
 )
 

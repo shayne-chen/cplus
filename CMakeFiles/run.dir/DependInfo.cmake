@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/data/shaw/cplusplus/exercise/src/boring.cc" "/data/shaw/cplusplus/exercise/CMakeFiles/run.dir/src/boring.cc.o"
   "/data/shaw/cplusplus/exercise/src/files.cc" "/data/shaw/cplusplus/exercise/CMakeFiles/run.dir/src/files.cc.o"
   "/data/shaw/cplusplus/exercise/src/main.cc" "/data/shaw/cplusplus/exercise/CMakeFiles/run.dir/src/main.cc.o"
   "/data/shaw/cplusplus/exercise/src/stack.cc" "/data/shaw/cplusplus/exercise/CMakeFiles/run.dir/src/stack.cc.o"

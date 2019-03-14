@@ -149,6 +149,33 @@ run/fast:
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
 .PHONY : run/fast
 
+src/boring.o: src/boring.cc.o
+
+.PHONY : src/boring.o
+
+# target to build an object file
+src/boring.cc.o:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/boring.cc.o
+.PHONY : src/boring.cc.o
+
+src/boring.i: src/boring.cc.i
+
+.PHONY : src/boring.i
+
+# target to preprocess a source file
+src/boring.cc.i:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/boring.cc.i
+.PHONY : src/boring.cc.i
+
+src/boring.s: src/boring.cc.s
+
+.PHONY : src/boring.s
+
+# target to generate assembly for a file
+src/boring.cc.s:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/boring.cc.s
+.PHONY : src/boring.cc.s
+
 src/files.o: src/files.cc.o
 
 .PHONY : src/files.o
@@ -382,6 +409,9 @@ help:
 	@echo "... thread"
 	@echo "... test"
 	@echo "... run"
+	@echo "... src/boring.o"
+	@echo "... src/boring.i"
+	@echo "... src/boring.s"
 	@echo "... src/files.o"
 	@echo "... src/files.i"
 	@echo "... src/files.s"

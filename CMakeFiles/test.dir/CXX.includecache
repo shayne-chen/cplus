@@ -36,6 +36,16 @@ map
 vector
 -
 
+/data/shaw/cplusplus/exercise/src/files_test.cc
+iostream
+-
+string
+-
+files.h
+/data/shaw/cplusplus/exercise/src/files.h
+gtest/gtest.h
+/data/shaw/cplusplus/exercise/src/gtest/gtest.h
+
 /data/shaw/cplusplus/exercise/src/str.cc
 string
 -
@@ -67,6 +77,10 @@ gtest/gtest.h
 /data/shaw/cplusplus/exercise/src/gtest/gtest.h
 str.h
 /data/shaw/cplusplus/exercise/src/str.h
+
+/data/shaw/cplusplus/exercise/src/test_main.cc
+gtest/gtest.h
+/data/shaw/cplusplus/exercise/src/gtest/gtest.h
 
 third_party/gtest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
