@@ -51,16 +51,18 @@ int* mergetwoarray(int* arr1,int arr1_length,int* arr2,int arr2_length) {
 }
 
 void quicksort(int* arr, int start, int end) {
-  // if (length <= 1) {return arr;}
   if (start>end) {return;}
   int i = start, j = end, key = arr[start];
   while (i<j) {
-  	while (i<j && arr[j]>=key) {
+    if (arr[i] == arr[j]) {
+      j--;
+    }
+  	while (i<j && arr[j]>key) {
   	  j--;
   	}
   	int temp = arr[j];
 
-    while (i<j && arr[i]<=key) {
+    while (i<j && arr[i]<key) {
   	  i++;
     }
     arr[j] = arr[i];
