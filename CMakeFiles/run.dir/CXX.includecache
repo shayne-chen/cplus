@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/data/shaw/cplusplus/exercise/src/boring.cc
+boring.h
+/data/shaw/cplusplus/exercise/src/boring.h
+iostream
+-
+
 /data/shaw/cplusplus/exercise/src/boring.h
 
 /data/shaw/cplusplus/exercise/src/files.h
