@@ -74,7 +74,7 @@ void quicksort(int* arr, int start, int end) {
 }
 
 void maxheapsort(int* arr, int length) {
-  for (int leng=length;leng>0;leng--) {
+  for (int leng=length;leng>1;leng--) {
     for (int node_index=leng/2-1;node_index>=0;node_index--) {
       int left = 2*node_index+1;
       int right = 2*node_index+2;
@@ -93,9 +93,27 @@ void maxheapsort(int* arr, int length) {
     arr[leng-1] = arr[0];
     arr[0] = temp3;
   }
-  for (int i=0;i<length;++i) {
-    std::cout<<arr[i]<<std::endl;
-  }
 }
 
+void minheapsort(int* arr, int length) {
+  for (int leng=length;leng>1;leng--) {
+    for (int node_index=leng/2-1;node_index>=0;node_index--) {
+      int left = 2*node_index+1;
+      int right = 2*node_index+2;
+      if (left<leng && arr[left]<arr[node_index]) {
+        int temp1 = arr[left];
+        arr[left] = arr[node_index];
+        arr[node_index] = temp1;
+      }
+      if (right<leng && arr[right]<arr[node_index]) {
+        int temp2 = arr[right];
+        arr[right] = arr[node_index];
+        arr[node_index] = temp2;
+      }
+    }
+    int temp3 = arr[leng-1];
+    arr[leng-1] = arr[0];
+    arr[0] = temp3;
+  }
+}
 } //namespace shaw
