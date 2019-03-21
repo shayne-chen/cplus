@@ -155,6 +155,7 @@ src/boring.o: src/boring.cc.o
 
 # target to build an object file
 src/boring.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boring.cc.o
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/boring.cc.o
 .PHONY : src/boring.cc.o
 
@@ -164,6 +165,7 @@ src/boring.i: src/boring.cc.i
 
 # target to preprocess a source file
 src/boring.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boring.cc.i
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/boring.cc.i
 .PHONY : src/boring.cc.i
 
@@ -173,8 +175,36 @@ src/boring.s: src/boring.cc.s
 
 # target to generate assembly for a file
 src/boring.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boring.cc.s
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/boring.cc.s
 .PHONY : src/boring.cc.s
+
+src/boring_test.o: src/boring_test.cc.o
+
+.PHONY : src/boring_test.o
+
+# target to build an object file
+src/boring_test.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boring_test.cc.o
+.PHONY : src/boring_test.cc.o
+
+src/boring_test.i: src/boring_test.cc.i
+
+.PHONY : src/boring_test.i
+
+# target to preprocess a source file
+src/boring_test.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boring_test.cc.i
+.PHONY : src/boring_test.cc.i
+
+src/boring_test.s: src/boring_test.cc.s
+
+.PHONY : src/boring_test.s
+
+# target to generate assembly for a file
+src/boring_test.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boring_test.cc.s
+.PHONY : src/boring_test.cc.s
 
 src/files.o: src/files.cc.o
 
@@ -412,6 +442,9 @@ help:
 	@echo "... src/boring.o"
 	@echo "... src/boring.i"
 	@echo "... src/boring.s"
+	@echo "... src/boring_test.o"
+	@echo "... src/boring_test.i"
+	@echo "... src/boring_test.s"
 	@echo "... src/files.o"
 	@echo "... src/files.i"
 	@echo "... src/files.s"

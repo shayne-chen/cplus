@@ -83,9 +83,22 @@ CMakeFiles/test.dir/src/files.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/files.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/files.cc -o CMakeFiles/test.dir/src/files.cc.s
 
+CMakeFiles/test.dir/src/boring.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/boring.cc.o: src/boring.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/boring.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/boring.cc.o -c /data/shaw/cplusplus/exercise/src/boring.cc
+
+CMakeFiles/test.dir/src/boring.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/boring.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/cplusplus/exercise/src/boring.cc > CMakeFiles/test.dir/src/boring.cc.i
+
+CMakeFiles/test.dir/src/boring.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/boring.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/boring.cc -o CMakeFiles/test.dir/src/boring.cc.s
+
 CMakeFiles/test.dir/src/str_test.cc.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/str_test.cc.o: src/str_test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/str_test.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/str_test.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/str_test.cc.o -c /data/shaw/cplusplus/exercise/src/str_test.cc
 
 CMakeFiles/test.dir/src/str_test.cc.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/test.dir/src/str_test.cc.s: cmake_force
 
 CMakeFiles/test.dir/src/files_test.cc.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/files_test.cc.o: src/files_test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/files_test.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/files_test.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/files_test.cc.o -c /data/shaw/cplusplus/exercise/src/files_test.cc
 
 CMakeFiles/test.dir/src/files_test.cc.i: cmake_force
@@ -109,9 +122,22 @@ CMakeFiles/test.dir/src/files_test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/files_test.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/files_test.cc -o CMakeFiles/test.dir/src/files_test.cc.s
 
+CMakeFiles/test.dir/src/boring_test.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/boring_test.cc.o: src/boring_test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/boring_test.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/boring_test.cc.o -c /data/shaw/cplusplus/exercise/src/boring_test.cc
+
+CMakeFiles/test.dir/src/boring_test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/boring_test.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/shaw/cplusplus/exercise/src/boring_test.cc > CMakeFiles/test.dir/src/boring_test.cc.i
+
+CMakeFiles/test.dir/src/boring_test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/boring_test.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/shaw/cplusplus/exercise/src/boring_test.cc -o CMakeFiles/test.dir/src/boring_test.cc.s
+
 CMakeFiles/test.dir/src/test_main.cc.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/test_main.cc.o: src/test_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/test_main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/test_main.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/src/test_main.cc.o -c /data/shaw/cplusplus/exercise/src/test_main.cc
 
 CMakeFiles/test.dir/src/test_main.cc.i: cmake_force
@@ -126,8 +152,10 @@ CMakeFiles/test.dir/src/test_main.cc.s: cmake_force
 test_OBJECTS = \
 "CMakeFiles/test.dir/src/str.cc.o" \
 "CMakeFiles/test.dir/src/files.cc.o" \
+"CMakeFiles/test.dir/src/boring.cc.o" \
 "CMakeFiles/test.dir/src/str_test.cc.o" \
 "CMakeFiles/test.dir/src/files_test.cc.o" \
+"CMakeFiles/test.dir/src/boring_test.cc.o" \
 "CMakeFiles/test.dir/src/test_main.cc.o"
 
 # External object files for target test
@@ -135,12 +163,14 @@ test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/src/str.cc.o
 test: CMakeFiles/test.dir/src/files.cc.o
+test: CMakeFiles/test.dir/src/boring.cc.o
 test: CMakeFiles/test.dir/src/str_test.cc.o
 test: CMakeFiles/test.dir/src/files_test.cc.o
+test: CMakeFiles/test.dir/src/boring_test.cc.o
 test: CMakeFiles/test.dir/src/test_main.cc.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/shaw/cplusplus/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

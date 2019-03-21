@@ -23,8 +23,10 @@ add_executable(run ${CXX_FILES_IN_SRC})
 set(UNIT_TEST_SRC
     ${SRC_ROOT_PATH}/src/str.cc
     ${SRC_ROOT_PATH}/src/files.cc
+    ${SRC_ROOT_PATH}/src/boring.cc
     ${SRC_ROOT_PATH}/src/str_test.cc
     ${SRC_ROOT_PATH}/src/files_test.cc
+    ${SRC_ROOT_PATH}/src/boring_test.cc
     ${SRC_ROOT_PATH}/src/test_main.cc
 )
 
