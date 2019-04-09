@@ -1,12 +1,11 @@
-#include <iostream>
 #include "boring.h"
 #include "gtest/gtest.h"
 using namespace shaw;
 namespace {
 class BoringTest : public testing::Test {
   protected:
-    int arr1[7] = {5,5,4,3,2,1,1};
-    int arr2[7] = {5,5,4,3,2,1,1};
+    int arr1[7] = {7,5,4,3,2,1,1};
+    int arr2[7] = {7,5,4,3,2,1,1};
     int length = 7;
     // void SetUp() override{
      //  execute before each case start;
@@ -27,4 +26,11 @@ TEST_F(BoringTest,SortTest) {
   }
 }
 
+TEST_F(BoringTest,FindIndexTest) {
+  quicksort(arr1,0,length-1);
+  EXPECT_EQ(find_index(arr1,length,1),1);
+  EXPECT_EQ(find_index(arr1,length,10),-1);
+  EXPECT_EQ(find_index(arr1,length,0),-1);
+  EXPECT_EQ(find_index(arr1,length,6),-1);
 }
+} //namespace

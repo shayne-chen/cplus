@@ -9,11 +9,12 @@
 using namespace shaw;
 using namespace std;
 
+void swap(string& s, int start, int end, const char k) {
+  
+}
+
 int main(int argc,char* argv[]) {
   /*code here*/
-  int arr[] = {10,10,9,8,100,65,54,43,23,1,2,4,1};
-  int length = sizeof(arr)/sizeof(arr[0]);
-  // maxheapsort(arr,length);
-  minheapsort(arr, length);
   return 0;
+
 }

@@ -116,4 +116,22 @@ void minheapsort(int* arr, int length) {
     arr[0] = temp3;
   }
 }
+
+int find_index(int* arr, int length, int key) {
+  if (length == 0) {return -1;}
+  if (key < arr[0] || key > arr[length-1]) {return -1;}
+  int start = 0;
+  int end = length;
+  while (start<end) {
+    int middle = (start+end)/2;
+    if (end-start == 1 && key != arr[start] && key != arr[end]) {return -1;}
+    if (arr[middle] == key) {return middle;}
+    else if (key > arr[middle]) {
+      start = middle;
+    } else {
+      end = middle;
+    }
+  }
+  return -1;
+}
 } //namespace shaw
