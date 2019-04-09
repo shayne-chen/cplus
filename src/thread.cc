@@ -1,10 +1,15 @@
 #include <pthread.h>
 #include <iostream>
+#include <mutex>
+
 static const int thread_nums = 5;
+std::mutex mtx;
 
 void* run(void* arg) {
+  mtx.lock();
   pthread_t tid = pthread_self();
-  std::cout<<"thread id is : "<<tid<<std::endl; 
+  std::cout<<"thread id is : "<<tid<<std::endl;
+  mtx.unlock();
 }
 
 int main(int argc, char const *argv[])
