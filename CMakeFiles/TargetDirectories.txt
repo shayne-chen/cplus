@@ -1,5 +1,0 @@
-/data/shaw/cplusplus/exercise/CMakeFiles/rebuild_cache.dir
-/data/shaw/cplusplus/exercise/CMakeFiles/edit_cache.dir
-/data/shaw/cplusplus/exercise/CMakeFiles/thread.dir
-/data/shaw/cplusplus/exercise/CMakeFiles/test.dir
-/data/shaw/cplusplus/exercise/CMakeFiles/run.dir
