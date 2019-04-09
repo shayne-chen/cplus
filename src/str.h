@@ -18,6 +18,7 @@ class Str {
     static int Contains(const std::string& s, const std::string& substr);
     static bool Sameletter(const std::string& s1, const std::string& s2);
     static std::string reverse(std::string s);
+    static std::string swap(std::string& s, const char& key1, const char& key2);
 };
 } //namespace shaw
 #endif // SHAW_STR_H_

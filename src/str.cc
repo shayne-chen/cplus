@@ -155,4 +155,29 @@ namespace shaw {
     }
     return s1;
   }
+
+  std::string Str::swap(std::string& s, const char& key1, const char& key2) {
+    std::vector<std::string> v;
+    int start = -1;
+    for (int i=0;i<s.size();++i) {
+      if (s[i] == key1) {
+        v.emplace_back(s.substr(start+1,i-start-1));
+        std::string s1(1,key1);
+        v.emplace_back(s1);
+        start = i;
+      }
+      if (s[i] == key2) {
+        v.emplace_back(s.substr(start+1,i-start-1));
+        std::string s3(1,key2);
+        v.emplace_back(s3);
+        start = i;
+      }
+    }
+    v.emplace_back(s.substr(start+1,s.size()-start));
+    std::string s2 = "";
+    for (int j=v.size()-1;j>=0;j--) {
+      s2 += v[j];
+    }
+    return s2;
+  }
 } // namespace shaw
