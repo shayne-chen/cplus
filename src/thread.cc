@@ -2,7 +2,7 @@
 #include <iostream>
 #include <mutex>
 
-static const int thread_nums = 5;
+#define THREAD_NUMS 5
 std::mutex mtx;
 
 void* run(void* arg) {
@@ -14,8 +14,8 @@ void* run(void* arg) {
 
 int main(int argc, char const *argv[])
 {
-  pthread_t threads[thread_nums];
-  for (int i=0;i<thread_nums;++i) {
+  pthread_t threads[THREAD_NUMS];
+  for (int i=0;i<THREAD_NUMS;++i) {
     int ret = pthread_create(&threads[i],NULL,&run,NULL);
     if (ret!=0) {
       std::cout<<"create pthread failed..."<<std::endl;
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
     }
     // pthread_join(threads[i],NULL);
   }
-  for (int i=0;i<thread_nums;++i) {
+  for (int i=0;i<THREAD_NUMS;++i) {
   	pthread_join(threads[i],NULL);
   }
   return 0;

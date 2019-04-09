@@ -66,4 +66,13 @@ TEST_F(StrTest,IndexTest) {
 TEST_F(StrTest,LegalStrTest) {
   EXPECT_TRUE(st.LegalStr(s));
 }
+
+TEST_F(StrTest,SwapTest) {
+  std::string s1 = "www.mobvoi/oos/sdk.com";
+  const char k1 = '.';
+  const char k2 = '/';
+  std::string s2 = st.swap(s1, k1, k2);
+  std::string s3 = "com.sdk/oos/mobvoi.www";
+  EXPECT_EQ(s2, s3);
+}
 } // namespace
