@@ -68,11 +68,18 @@ TEST_F(StrTest,LegalStrTest) {
 }
 
 TEST_F(StrTest,SwapTest) {
-  std::string s1 = "www.mobvoi/oos/sdk.com";
   const char k1 = '.';
   const char k2 = '/';
-  std::string s2 = st.swap(s1, k1, k2);
-  std::string s3 = "com.sdk/oos/mobvoi.www";
-  EXPECT_EQ(s2, s3);
+  std::string s1 = "www.mobvoi/oos/sdk.com";
+  std::string s2 = "com.sdk/oos/mobvoi.www";
+  EXPECT_EQ(s2, st.swap(s1, k1, k2));
+
+  std::string s3 = "www.mobvoi.com";
+  std::string s4 = "com.mobvoi.www";
+  EXPECT_EQ(s4, st.swap(s3, k1, k2));
+
+  std::string s5 = "www/mobvoi/com";
+  std::string s6 = "com/mobvoi/www";
+  EXPECT_EQ(s6, st.swap(s5, k1, k2));
 }
 } // namespace
