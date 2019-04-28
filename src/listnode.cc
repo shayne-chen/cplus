@@ -1,4 +1,13 @@
 #include <iostream>
+#include <vector>
+
+class nodetest {
+public:
+  nodetest();
+  ~nodetest();
+private:
+  std::string name;
+};
 
 template<typename T1>
 struct Node
@@ -15,18 +24,16 @@ Node<T2>* addnode(T2 t2) {
 }
 
 Node<int>* gene_listnode1() {
-  Node<int>* n1 = addnode<int>(3);
-  Node<int>* n2 = addnode<int>(7);
-  Node<int>* n3 = addnode<int>(10);
+  Node<int>* n1 = addnode<int>(10);
+  Node<int>* n2 = addnode<int>(3);
+  Node<int>* n3 = addnode<int>(7);
   n1->next = n2;
   n2->next = n3;
   n3->next = nullptr;
-  std::cout<<"n1="<<n1<<std::endl;
-  std::cout<<"n1 next="<<n1->next<<std::endl;
-  std::cout<<"n2="<<n2<<std::endl;
-  std::cout<<"n2 next="<<n2->next<<std::endl;
-  std::cout<<"n3="<<n3<<std::endl;
-  std::cout<<"n3 next="<<n3->next<<std::endl;
+  std::cout<<"n1="<<n1<<", n1 next="<<n1->next<<std::endl;
+  std::cout<<"n2="<<n2<<", n2 next="<<n2->next<<std::endl;
+  std::cout<<"n3="<<n3<<", n3 next="<<n3->next<<std::endl;
+ 
   return n1;
 }
 
@@ -37,8 +44,7 @@ Node<int>* gene_listnode2() {
   n4->next = n5;
   n5->next = n6;
   n6->next = nullptr;
-  std::cout<<"n4="<<n4<<std::endl;
-  std::cout<<"n4 next="<<n4->next<<std::endl;
+  std::cout<<"n4="<<n4<<"n4 next="<<n4->next<<std::endl;
   std::cout<<"n5="<<n5<<std::endl;
   std::cout<<"n5 next="<<n5->next<<std::endl;
   std::cout<<"n6="<<n6<<std::endl;
@@ -124,29 +130,48 @@ Node<int>* merge(Node<int>* h1, Node<int>* h2) {
   return merge_head;
 }
 
-//not complete
-Node<int>* sort(Node<int>* head) {
-  if (head == nullptr || head->next == nullptr) {return head;}
+//what the fuck codeing
+std::vector<Node<int>*> v;
+void sort(Node<int>* head) {
+  // if (head == nullptr || head->next == nullptr) {return head;}
+  Node<int>* prev = nullptr;
   Node<int>* new_head = nullptr;
-  Node<int>* new_head_prev = nullptr;
-  while (head != nullptr) {
-    if (head->value < head->next->value) {
-      new_head = head;
-    } else {
+  Node<int>* origin_head = head;
+  while (head->next != nullptr) {
+    if (head->value > head->next->value) {
       new_head = head->next;
+      prev = head;
+    } else {
+      new_head = head;
     }
     head = head->next;
   }
-
+  prev->next = new_head->next;
+  new_head->next = origin_head;
+  
+  v.emplace_back(new_head);
+  std::cout<<std::endl;
+  Node<int>* tmp = new_head;
+  while (tmp != nullptr) {
+    std::cout<<"current="<<tmp<<", value="<<tmp->value<<", next="<<tmp->next<<std::endl;
+    tmp = tmp->next;
+  }
+  std::cout<<std::endl;
+  if (new_head->next->next != nullptr) {
+    sort(new_head->next);
+  } else {
+    std::cout<<"last node, not sort"<<std::endl;
+  }
 }
 
 int main(int argc, char const *argv[])
 {
   Node<int>* head1 = gene_listnode1();
+  sort(head1);
+  Node<int>* new_head = v[0];
   std::cout<<std::endl;
-  Node<int>* head2 = gene_listnode2();
+  std::cout<<"after sort"<<std::endl;
   std::cout<<std::endl;
-  Node<int>* new_head = merge(head1, head2);
   while (new_head != nullptr) {
     std::cout<<"current="<<new_head<<", value="<<new_head->value<<", next="<<new_head->next<<std::endl;
     new_head = new_head->next;
