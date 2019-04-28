@@ -130,7 +130,7 @@ Node<int>* merge(Node<int>* h1, Node<int>* h2) {
   return merge_head;
 }
 
-//what the fuck codeing
+//what the fuck coding
 std::vector<Node<int>*> v;
 void sort(Node<int>* head) {
   // if (head == nullptr || head->next == nullptr) {return head;}
@@ -151,31 +151,32 @@ void sort(Node<int>* head) {
   
   v.emplace_back(new_head);
   std::cout<<std::endl;
-  Node<int>* tmp = new_head;
-  while (tmp != nullptr) {
-    std::cout<<"current="<<tmp<<", value="<<tmp->value<<", next="<<tmp->next<<std::endl;
-    tmp = tmp->next;
-  }
-  std::cout<<std::endl;
   if (new_head->next->next != nullptr) {
     sort(new_head->next);
   } else {
-    std::cout<<"last node, not sort"<<std::endl;
+    v.emplace_back(new_head->next);
   }
 }
+
 
 int main(int argc, char const *argv[])
 {
   Node<int>* head1 = gene_listnode1();
   sort(head1);
-  Node<int>* new_head = v[0];
   std::cout<<std::endl;
   std::cout<<"after sort"<<std::endl;
-  std::cout<<std::endl;
+  int i=0;
+  while (i < v.size()-1) {
+    if (v[i]->next != nullptr) {
+      v[i]->next = v[i+1];
+    }
+    i++;
+  }
+  v[i]->next = nullptr;
+  Node<int>* new_head = v[0];
   while (new_head != nullptr) {
     std::cout<<"current="<<new_head<<", value="<<new_head->value<<", next="<<new_head->next<<std::endl;
     new_head = new_head->next;
   }
-
   return 0;
 }
