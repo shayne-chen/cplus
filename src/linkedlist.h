@@ -1,29 +1,41 @@
-#ifndef SHAW_BORING_H_
-#define SHAW_BORING_H_
+#ifndef SHAW_LINKEDLIST_H_
+#define SHAW_LINKEDLIST_H_
+#include <iostream>
+
 namespace shaw {
+
+template<typename T>
+struct Node {
+    Node* next;
+    T value;
+};
 
 template<class T>
 class Linkedlist {
 public:
   Node<T>* addnode(T t);
+  void printlist(Node<T>* head);
   Node<T>* reverse(Node<T>* head);
   Node<T>* deletenode(Node<T>* head, T value);
-  int length(Node<int>* head);
+  int getlength(Node<T>* head);
   Node<T>* merge(Node<T>* h1, Node<T>* h2);
   Node<T>* insert(Node<T>* insert_node, Node<T>* head);
-  Node<T>* sort(Node<T>* head);  
-private:
-  struct Node {
-    Node* next;
-    T value;
-  }
+  Node<T>* sort(Node<T>* head);
 };
 
 template<class T>
 Node<T>* Linkedlist<T>::addnode(T t) {
-  Node<T> node = new Node<T>;
+  Node<T>* node = new Node<T>;
   node->value = t;
   return node;
+}
+
+template<class T>
+void Linkedlist<T>::printlist(Node<T>* head) {
+  while (head != nullptr) {
+    std::cout<<"node="<<head<<", value="<<head->value<<", next node="<<head->next<<std::endl;
+    head = head->next;
+  }
 }
 
 template<class T>
@@ -58,7 +70,7 @@ Node<T>* Linkedlist<T>::deletenode(Node<T>* head, T value) {
 }
 
 template<class T>
-int Linkedlist<T>::length(Node<T>* head) {
+int Linkedlist<T>::getlength(Node<T>* head) {
   int length = 0;
   while (head != nullptr) {
     length += 1;
@@ -133,4 +145,4 @@ Node<T>* Linkedlist<T>::sort(Node<T>* head) {
 }
 
 } //namespace shaw
-#endif //SHAW_BORING_H_
+#endif //SHAW_LINKEDLIST_H_

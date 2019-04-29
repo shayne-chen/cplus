@@ -10,8 +10,6 @@
 using namespace shaw;
 
 int main(int argc,char* argv[]) {
-  Linkedlist<int> linklist(10);
-  // linklist.addnode(10);
-  std::cout<<linklist.addnode(10)<<", value="<<linklist.addnode(10)->value<<std::endl;
+  // code here
   return 0;
 }
