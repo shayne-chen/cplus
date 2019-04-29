@@ -121,6 +121,7 @@ Node<T>* Linkedlist<T>::insert(Node<T>* insert_node, Node<T>* head) {
   return origin_head;
 }
 
+// what the fucking code
 template<class T>
 Node<T>* Linkedlist<T>::sort(Node<T>* head) {
   if (head == nullptr || head->next == nullptr) {return head;}
