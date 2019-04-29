@@ -3,7 +3,7 @@
 namespace shaw {
 
 template<class T>
-class linkedlist {
+class Linkedlist {
 public:
   Node<T>* addnode(T t);
   Node<T>* reverse(Node<T>* head);
@@ -19,13 +19,15 @@ private:
   }
 };
 
-Node<T>* linkedlist<T>::addnode(T t) {
+template<class T>
+Node<T>* Linkedlist<T>::addnode(T t) {
   Node<T> node = new Node<T>;
   node->value = t;
   return node;
 }
 
-Node<T>* linkedlist<T>::reverse(Node<T>* head) {
+template<class T>
+Node<T>* Linkedlist<T>::reverse(Node<T>* head) {
   Node<T>* prev = nullptr;
   while (head != nullptr) {
   	Node<T>* tmp = head->next;
@@ -36,7 +38,8 @@ Node<T>* linkedlist<T>::reverse(Node<T>* head) {
   return prev;
 }
 
-Node<T>* linkedlist<T>::deletenode(Node<T>* head, T value) {
+template<class T>
+Node<T>* Linkedlist<T>::deletenode(Node<T>* head, T value) {
   if (head->value == value) {
     return head->next;
   }
@@ -54,7 +57,8 @@ Node<T>* linkedlist<T>::deletenode(Node<T>* head, T value) {
   return origin_head;
 }
 
-int linkedlist<T>::length(Node<T>* head) {
+template<class T>
+int Linkedlist<T>::length(Node<T>* head) {
   int length = 0;
   while (head != nullptr) {
     length += 1;
@@ -63,7 +67,8 @@ int linkedlist<T>::length(Node<T>* head) {
   return length;
 }
 
-Node<T>* linkedlist<T>::merge(Node<T>* h1, Node<T>* h2) {
+template<class T>
+Node<T>* Linkedlist<T>::merge(Node<T>* h1, Node<T>* h2) {
   if (h1 == nullptr) {
     return h2;
   }
@@ -81,7 +86,8 @@ Node<T>* linkedlist<T>::merge(Node<T>* h1, Node<T>* h2) {
   return merge_head;
 }
 
-Node<T>* linkedlist<T>::insert(Node<T>* insert_node, Node<T>* head) {
+template<class T>
+Node<T>* Linkedlist<T>::insert(Node<T>* insert_node, Node<T>* head) {
   Node<T>* origin_head = head;
   T insert_value = insert_node->value;
   Node<T>* prev = nullptr;
@@ -103,11 +109,12 @@ Node<T>* linkedlist<T>::insert(Node<T>* insert_node, Node<T>* head) {
   return origin_head;
 }
 
-Node<T>* linkedlist<T>::sort(Node<int>* head) {
+template<class T>
+Node<T>* Linkedlist<T>::sort(Node<T>* head) {
   if (head == nullptr || head->next == nullptr) {return head;}
-  Node<int>* prev = nullptr;
-  Node<int>* new_head = nullptr;
-  Node<int>* origin_head = head;
+  Node<T>* prev = nullptr;
+  Node<T>* new_head = nullptr;
+  Node<T>* origin_head = head;
   while (head->next != nullptr) {
     if (head->value > head->next->value) {
       new_head = head->next;

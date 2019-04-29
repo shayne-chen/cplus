@@ -6,9 +6,12 @@
 #include "str.h"
 #include "stack.h"
 #include "boring.h"
+#include "linkedlist.h"
 using namespace shaw;
 
 int main(int argc,char* argv[]) {
-  /*code here*/
+  Linkedlist<int> linklist(10);
+  // linklist.addnode(10);
+  std::cout<<linklist.addnode(10)<<", value="<<linklist.addnode(10)->value<<std::endl;
   return 0;
 }
