@@ -92,7 +92,9 @@ TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, TreeNode<T>* delete_node) {
       root->left = root;
       delete root;
       root = nullptr;
-    } else {
+    } else 
+    // how to do when left and right both exists;
+    { 
       root->right = root;
       delete root;
       root = nullptr;
