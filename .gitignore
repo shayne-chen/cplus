@@ -11,3 +11,5 @@ run
 test
 
 thread
+core
+src/core

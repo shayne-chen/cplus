@@ -86,6 +86,15 @@ TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, TreeNode<T>* delete_node) {
   	deletenode(root->right, delete_node);
   } else {
     // how to record the prev node, fuck.
+    if (root->left == nullptr && root->right == nullptr) {
+      root = nullptr;
+    } else if (root->left != nullptr) {
+      root->left = root;
+      delete root;
+    } else {
+      root->right = root;
+      delete root;
+    }
   }
 }
 
