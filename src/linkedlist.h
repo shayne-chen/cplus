@@ -63,6 +63,8 @@ Node<T>* Linkedlist<T>::deletenode(Node<T>* head, T value) {
       head = head->next;
     } else {
       prev->next = head->next;
+      delete head;
+      head = nullptr;
       return origin_head;
     }
   }
