@@ -91,9 +91,11 @@ TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, TreeNode<T>* delete_node) {
     } else if (root->left != nullptr) {
       root->left = root;
       delete root;
+      root = nullptr;
     } else {
       root->right = root;
       delete root;
+      root = nullptr;
     }
   }
 }
