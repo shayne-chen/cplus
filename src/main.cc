@@ -16,13 +16,15 @@ int main(int argc,char* argv[]) {
   TreeNode<int>* t2 = tree.add_treenode(20);
   TreeNode<int>* t3 = tree.add_treenode(40);
   TreeNode<int>* t4 = tree.add_treenode(10);
+  TreeNode<int>* t5 = tree.add_treenode(25);
   t1->left = t2;
   t1->right = t3;
   t2->left = t4;
+  t2->right = t5;
   tree.print(t1);
-  std::cout<<"after insert"<<std::endl;
-  TreeNode<int>* t5 = tree.add_treenode(20);
-  TreeNode<int>* new_head = tree.insert(t1, t5);
+  std::cout<<"after delete"<<std::endl;
+  tree.deletenode(t1,20);
   tree.print(t1);
+  
   return 0;
 }

@@ -18,8 +18,10 @@ class Tree {
     void print(TreeNode<T>* root);
     TreeNode<T>* reverse(TreeNode<T>* root);
     TreeNode<T>* insert(TreeNode<T>* root, TreeNode<T>* insert_node);
-    TreeNode<T>* deletenode(TreeNode<T>* root, TreeNode<T>* delete_node);
+    TreeNode<T>* deletenode(TreeNode<T>* root, T delete_value);
+    TreeNode<T>* find_lastleft(TreeNode<T>* root);
 };
+
 
 template<class T>
 TreeNode<T>* Tree<T>::add_treenode(T t) {
@@ -27,6 +29,7 @@ TreeNode<T>* Tree<T>::add_treenode(T t) {
   treenode->value = t;
   return treenode;
 }
+
 
 template<class T>
 void Tree<T>::print(TreeNode<T>* root) {
@@ -36,6 +39,7 @@ void Tree<T>::print(TreeNode<T>* root) {
   	print(root->left);
   }
 }
+
 
 template<class T>
 TreeNode<T>* Tree<T>::reverse(TreeNode<T>* root) {
@@ -49,6 +53,7 @@ TreeNode<T>* Tree<T>::reverse(TreeNode<T>* root) {
 }
 
 
+// the tree is completed tree
 template<class T>
 TreeNode<T>* Tree<T>::insert(TreeNode<T>* root, TreeNode<T>* insert_node) {
   if (root == nullptr) {return insert_node;}
@@ -76,30 +81,43 @@ TreeNode<T>* Tree<T>::insert(TreeNode<T>* root, TreeNode<T>* insert_node) {
 
 //what the fucking code
 template<class T>
-TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, TreeNode<T>* delete_node) {
+TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, T delete_value) {
   if (root == nullptr) {
   	return root;
   }
-  if (delete_node->value < root->value) {
-  	deletenode(root->left, delete_node);
-  } else if (delete_node->value > root->value) {
-  	deletenode(root->right, delete_node);
+  if (delete_value < root->value) {
+  	deletenode(root->left, delete_value);
+  } else if (delete_value > root->value) {
+  	deletenode(root->right, delete_value);
   } else {
-    // how to record the prev node, fuck.
     if (root->left == nullptr && root->right == nullptr) {
-      root = nullptr;
-    } else if (root->left != nullptr) {
-      root->left = root;
       delete root;
       root = nullptr;
-    } else 
-    // how to do when left and right both exists;
-    { 
-      root->right = root;
-      delete root;
-      root = nullptr;
+    } else if (root->left != nullptr && root->right == nullptr) {
+      root->value = root->left->value;
+      delete root->left;
+      root->left = nullptr;
+    } else if (root->right != nullptr && root->left == nullptr) { 
+      root->value = root->right->value;
+      delete root->right;
+      root->right = nullptr;
+    } else {
+      TreeNode<T>* lastleft = find_lastleft(root->right);
+      root->value = lastleft->value;
+      delete lastleft;
+      lastleft = nullptr;
     }
   }
+}
+
+
+template<class T>
+TreeNode<T>* Tree<T>::find_lastleft(TreeNode<T>* root) {
+  if (root == nullptr) {return root;}
+  while (root != nullptr && root->left != nullptr) {
+  	root = root->left;
+  }
+  return root;
 }
 
 

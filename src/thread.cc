@@ -3,17 +3,18 @@
 #include <mutex>
 
 #define THREAD_NUMS 5
-std::mutex mtx;
+pthread_mutex_t mutex_;
 
 void* run(void* arg) {
-  mtx.lock();
+  pthread_mutex_lock(&mutex_);
   pthread_t tid = pthread_self();
   std::cout<<"thread id is : "<<tid<<std::endl;
-  mtx.unlock();
+  pthread_mutex_unlock(&mutex_);
 }
 
 int main(int argc, char const *argv[])
 {
+  pthread_mutex_init(&mutex_, NULL);
   pthread_t threads[THREAD_NUMS];
   for (int i=0;i<THREAD_NUMS;++i) {
     int ret = pthread_create(&threads[i],NULL,&run,NULL);
@@ -21,10 +22,10 @@ int main(int argc, char const *argv[])
       std::cout<<"create pthread failed..."<<std::endl;
       return -1;
     }
-    // pthread_join(threads[i],NULL);
   }
   for (int i=0;i<THREAD_NUMS;++i) {
   	pthread_join(threads[i],NULL);
   }
+  pthread_mutex_destroy(&mutex_);
   return 0;
 }
