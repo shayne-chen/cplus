@@ -35,8 +35,8 @@ template<class T>
 void Tree<T>::print(TreeNode<T>* root) {
   if (root != nullptr) {
   	std::cout<<"root="<<root<<", value="<<root->value<<", left="<<root->left<<", right="<<root->right<<std::endl;
-  	print(root->right);
   	print(root->left);
+  	print(root->right);
   }
 }
 
@@ -86,28 +86,30 @@ TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, T delete_value) {
   	return root;
   }
   if (delete_value < root->value) {
-  	deletenode(root->left, delete_value);
+  	root->left = deletenode(root->left, delete_value);
   } else if (delete_value > root->value) {
-  	deletenode(root->right, delete_value);
+  	root->right = deletenode(root->right, delete_value);
   } else {
     if (root->left == nullptr && root->right == nullptr) {
       delete root;
       root = nullptr;
     } else if (root->left != nullptr && root->right == nullptr) {
-      root->value = root->left->value;
-      delete root->left;
-      root->left = nullptr;
+      root->left = root;
+      delete root;
+      root = nullptr;
+      return root->left;
     } else if (root->right != nullptr && root->left == nullptr) { 
-      root->value = root->right->value;
-      delete root->right;
-      root->right = nullptr;
+      root->right = root;
+      delete root;
+      root = nullptr;
+      return root->right;
     } else {
       TreeNode<T>* lastleft = find_lastleft(root->right);
       root->value = lastleft->value;
-      delete lastleft;
-      lastleft = nullptr;
+      root->right = deletenode(root->right, lastleft->value);
     }
   }
+  return root;
 }
 
 

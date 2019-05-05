@@ -23,8 +23,7 @@ int main(int argc,char* argv[]) {
   t2->right = t5;
   tree.print(t1);
   std::cout<<"after delete"<<std::endl;
-  tree.deletenode(t1,20);
+  tree.deletenode(t1,40);
   tree.print(t1);
-  
   return 0;
 }
