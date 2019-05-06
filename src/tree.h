@@ -53,7 +53,6 @@ TreeNode<T>* Tree<T>::reverse(TreeNode<T>* root) {
 }
 
 
-// the tree is completed tree
 template<class T>
 TreeNode<T>* Tree<T>::insert(TreeNode<T>* root, TreeNode<T>* insert_node) {
   if (root == nullptr) {return insert_node;}
@@ -79,7 +78,7 @@ TreeNode<T>* Tree<T>::insert(TreeNode<T>* root, TreeNode<T>* insert_node) {
   }
 }
 
-//what the fucking code
+
 template<class T>
 TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, T delete_value) {
   if (root == nullptr) {
@@ -98,7 +97,7 @@ TreeNode<T>* Tree<T>::deletenode(TreeNode<T>* root, T delete_value) {
       delete root;
       root = nullptr;
       return root->left;
-    } else if (root->right != nullptr && root->left == nullptr) { 
+    } else if (root->right != nullptr && root->left == nullptr) {
       root->right = root;
       delete root;
       root = nullptr;
