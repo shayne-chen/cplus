@@ -20,6 +20,10 @@ class Tree {
     TreeNode<T>* insert(TreeNode<T>* root, TreeNode<T>* insert_node);
     TreeNode<T>* deletenode(TreeNode<T>* root, T delete_value);
     TreeNode<T>* find_lastleft(TreeNode<T>* root);
+    int getdepth(TreeNode<T>* root);
+  private:
+    int depth1 = 0;
+    int depth2 = 0;
 };
 
 
@@ -121,6 +125,20 @@ TreeNode<T>* Tree<T>::find_lastleft(TreeNode<T>* root) {
   return root;
 }
 
+
+
+template<class T>
+int Tree<T>::getdepth(TreeNode<T>* root) {
+  if (root->left != nullptr) {
+    depth1++;
+    getdepth(root->left);
+  }
+  if (root->right != nullptr) {
+    depth2++;
+    getdepth(root->right);
+  }
+  return (depth1>depth2)?(depth1+1):(depth2+1);
+}
 
 } //namespace shaw
 #endif //SHAW_TREE_H_
