@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 #include <string>
 #include <set>
 #include <vector>
@@ -21,7 +22,12 @@ int main(int argc,char* argv[]) {
   t1->right = t3;
   t3->left = t4;
   t3->right = t5;
-  tree.print(t1);
+  std::cout<<"pre print"<<std::endl;
+  tree.pre_print(t1);
+  std::cout<<"middle print"<<std::endl;
+  tree.middle_print(t1);
+  std::cout<<"after print"<<std::endl;
+  tree.after_print(t1);
   std::cout<<"depth="<<tree.getdepth(t1)<<std::endl;
   return 0;
 }

@@ -14,6 +14,7 @@ class Str {
     static std::string Upper(std::string& src);
     static std::string Lower(std::string& src);
     static bool LegalStr(const std::string& s);
+    static bool LegalStrFlex(const std::string& s);
     static int Index(const std::string& s, const char& c);
     static int Contains(const std::string& s, const std::string& substr);
     static bool Sameletter(const std::string& s1, const std::string& s2);

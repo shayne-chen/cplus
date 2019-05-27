@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <map>
 #include <vector>
 #include <stack>
 #include <set>
@@ -103,7 +104,26 @@ namespace shaw {
     }
     return s_stack.size()==0;
   }
-
+/*
+  bool Str::LegalStrFlex(const std::string& s) {
+    std::map<char, char> m;
+    m['('] = ')';
+    m['['] = ']';
+    m['{'] = '}';
+    if (s.size()<=0) {return true;}
+    std::stack<char> s_stack;
+    for (char& c:s) {
+      if (c=='(' || c=='[' || c=='{') {
+        s_stack.push(c);
+      } else if (c==')' || c==']' || c=='}') {
+        if (c != m[s_stack.pop()]) {
+          return false;
+        } else {s_stack.pop();}
+      }
+    }
+    return s_stack.size()==0;
+  }
+*/
   int Str::Index(const std::string& s, const char& c) {
     if (s.size() == 0) {return -1;}
     for (unsigned int i=0;i<s.size();++i) {

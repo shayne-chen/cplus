@@ -15,7 +15,9 @@ template<class T>
 class Tree {
   public:
     TreeNode<T>* add_treenode(T t);
-    void print(TreeNode<T>* root);
+    void pre_print(TreeNode<T>* root);
+    void middle_print(TreeNode<T>* root);
+    void after_print(TreeNode<T>* root);
     TreeNode<T>* reverse(TreeNode<T>* root);
     TreeNode<T>* insert(TreeNode<T>* root, TreeNode<T>* insert_node);
     TreeNode<T>* deletenode(TreeNode<T>* root, T delete_value);
@@ -36,11 +38,31 @@ TreeNode<T>* Tree<T>::add_treenode(T t) {
 
 
 template<class T>
-void Tree<T>::print(TreeNode<T>* root) {
+void Tree<T>::middle_print(TreeNode<T>* root) {
   if (root != nullptr) {
   	std::cout<<"root="<<root<<", value="<<root->value<<", left="<<root->left<<", right="<<root->right<<std::endl;
-  	print(root->left);
-  	print(root->right);
+  	middle_print(root->left);
+  	middle_print(root->right);
+  }
+}
+
+
+template<class T>
+void Tree<T>::pre_print(TreeNode<T>* root) {
+  if (root != nullptr) {
+    pre_print(root->left);
+    std::cout<<"root="<<root<<", value="<<root->value<<", left="<<root->left<<", right="<<root->right<<std::endl;
+    pre_print(root->right);
+  }
+}
+
+
+template<class T>
+void Tree<T>::after_print(TreeNode<T>* root) {
+  if (root != nullptr) {
+    after_print(root->left);
+    after_print(root->right);
+    std::cout<<"root="<<root<<", value="<<root->value<<", left="<<root->left<<", right="<<root->right<<std::endl;
   }
 }
 
