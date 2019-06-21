@@ -21,6 +21,7 @@ public:
   Node<T>* merge(Node<T>* h1, Node<T>* h2);
   Node<T>* insert(Node<T>* insert_node, Node<T>* head);
   Node<T>* sort(Node<T>* head);
+  bool circle_length(Node<T>* head);
 };
 
 template<class T>
@@ -145,6 +146,31 @@ Node<T>* Linkedlist<T>::sort(Node<T>* head) {
     sort(new_head->next);
   }
   return new_head;
+}
+
+
+template<class T>
+int Linkedlist<T>::circle_length(Node<T>* head) {
+  if (head == nullptr || head->next == nullptr) {
+    return 0;
+  }
+  Node<T>* slow = head->next;
+  Node<T>* fast = head->next->next;
+  while (fast != nullptr) {
+    if (slow == fast) {
+      Node<T>* join = slow;
+      int length = 0;
+      while (slow->next != join) {
+        length++;
+        slow = slow->next;
+      }
+      return length;
+    } else {
+      slow = slow->next;
+      fast = fast->next->next;
+    }
+  }
+  return 0;
 }
 
 } //namespace shaw
