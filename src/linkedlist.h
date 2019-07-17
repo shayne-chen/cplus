@@ -21,7 +21,7 @@ public:
   Node<T>* merge(Node<T>* h1, Node<T>* h2);
   Node<T>* insert(Node<T>* insert_node, Node<T>* head);
   Node<T>* sort(Node<T>* head);
-  bool circle_length(Node<T>* head);
+  int circle_length(Node<T>* head);
 };
 
 template<class T>
